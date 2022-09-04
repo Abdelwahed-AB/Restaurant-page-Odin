@@ -29,6 +29,7 @@
 
     --color-bg-1 : rgba(9, 18, 52, 85%);
     --color-bg-2 : rgba(9, 18, 53, 85%);
+    --color-bg-3 : rgba(43, 66, 87, 25%);
 
     --fontsize-def: 1.25rem;
     --fontsize-title: 3rem;
@@ -40,6 +41,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Roboto-light', sans-serif;
+    color: var(--color-white);
 }
 
 body{
@@ -74,8 +78,6 @@ header{
     border: none;
     border-bottom: solid var(--border-size-def) var(--color-white);
 
-    color: var(--color-white);
-
     font-size: var(--fontsize-def);
 
     margin: 0 var(--margin-default);
@@ -83,9 +85,6 @@ header{
 }
 
 .home{
-    margin: var(--margin-large);
-    padding: var(--padding-large) var(--padding-default);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,6 +111,49 @@ header{
     padding: var(--padding-small);
 }
 
+
+.menuPage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-default);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--gap-default);
+
+    padding: var(--padding-default);
+
+    background-color: var(--color-bg-3);
+}
+.menu-item img{
+    width: 50%;
+    border: dotted var(--border-size-def) var(--color-gold);
+    padding: var(--padding-small);
+}
+
+.contactPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--gap-default);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--padding-default);
+    background-color: var(--color-bg-1);
+}
+
 /*Utility*/
 .fancy-text{
     font-family: "AntonyHunter", sans-serif;
@@ -127,6 +169,8 @@ header{
 
 .container{
     background-color: var(--color-bg-2);
+    margin: var(--margin-large);
+    padding: var(--padding-large) var(--padding-default);
 }
 
 .white-text{
