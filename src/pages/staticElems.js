@@ -1,5 +1,3 @@
-import { loadPage } from "./pageLoad";
-
 function header(){
     let h = document.createElement("header");
     h.classList.add("header")
@@ -18,7 +16,6 @@ function header(){
             case 0:
                 b.textContent = "Home";
                 b.setAttribute("data-page", "0");
-                b.classList.add("button-nav-active");
                 break;
             case 1:
                 b.textContent = "Menu";
@@ -29,15 +26,6 @@ function header(){
                 b.setAttribute("data-page", "2");
                 break;
         }
-
-        b.addEventListener("click", (e)=>{
-            btns.forEach((b)=>{
-                b.classList.remove("button-nav-active");
-            });
-            b.classList.add("button-nav-active");
-
-            loadPage(parseInt(b.dataset.page));
-        });
         btns.push(b);
     }
 
