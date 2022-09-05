@@ -236,7 +236,7 @@ function header(){
 function footer(){
     let foot = document.createElement("footer");
     let p = document.createElement("p");
-    p.textContent = "&copy Abd-AB";
+    p.textContent = "Abd-AB";
 
     foot.append(p);
     return foot;
